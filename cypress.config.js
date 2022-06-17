@@ -1,5 +1,7 @@
-module.exports = {
+const { defineConfig } = require('cypress')
+
+module.exports = defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {},
-  },
-}
+    setupNodeEvents: require('./cypress/plugins/index.js')
+  }
+})
